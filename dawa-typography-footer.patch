@@ -1,0 +1,1471 @@
+diff --git a/src/app/about/page.tsx b/src/app/about/page.tsx
+index 460eded..db5b2a7 100644
+--- a/src/app/about/page.tsx
++++ b/src/app/about/page.tsx
+@@ -15,10 +15,10 @@ export default function AboutPage() {
+       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+         {/* Intro Hero */}
+         <div className="text-center space-y-4">
+-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider">
++          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold">
+             About {siteConfig.brandName}
+           </div>
+-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
++          <h1 className="text-4xl sm:text-5xl font-semibold text-slate-900 tracking-tight">
+             Committed to Simpler Healthcare in Lucknow
+           </h1>
+           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+@@ -28,55 +28,55 @@ export default function AboutPage() {
+ 
+         {/* Core Principles */}
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+-          <div className="p-6 rounded-3xl bg-white border border-[#E2F5E9] shadow-xs space-y-3">
++          <div className="p-6 rounded-2xl bg-white border border-[#E2F5E9] space-y-3">
+             <div className="w-12 h-12 rounded-2xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center">
+               <HeartHandshake className="w-6 h-6" />
+             </div>
+-            <h2 className="text-base font-bold text-slate-900">Patient-Centric Simplicity</h2>
+-            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
++            <h2 className="text-base font-semibold text-slate-900">Patient-Centric Simplicity</h2>
++            <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
+               Managing healthcare shouldn&apos;t feel stressful. We use familiar WhatsApp interactions to make requesting everyday essentials natural and fast.
+             </p>
+           </div>
+ 
+-          <div className="p-6 rounded-3xl bg-white border border-[#E2F5E9] shadow-xs space-y-3">
++          <div className="p-6 rounded-2xl bg-white border border-[#E2F5E9] space-y-3">
+             <div className="w-12 h-12 rounded-2xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center">
+               <FileCheck2 className="w-6 h-6" />
+             </div>
+-            <h2 className="text-base font-bold text-slate-900">Prescription Vigilance</h2>
+-            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
++            <h2 className="text-base font-semibold text-slate-900">Prescription Vigilance</h2>
++            <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
+               Medicines are not ordinary consumer goods. We follow strict statutory guidelines for prescription verification before any pharmaceutical dispatch.
+             </p>
+           </div>
+ 
+-          <div className="p-6 rounded-3xl bg-white border border-[#E2F5E9] shadow-xs space-y-3">
++          <div className="p-6 rounded-2xl bg-white border border-[#E2F5E9] space-y-3">
+             <div className="w-12 h-12 rounded-2xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center">
+               <MapPin className="w-6 h-6" />
+             </div>
+-            <h2 className="text-base font-bold text-slate-900">Hyperlocal Network</h2>
+-            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
++            <h2 className="text-base font-semibold text-slate-900">Hyperlocal Network</h2>
++            <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
+               Dedicated exclusively to Lucknow localities—from Gomti Nagar and Hazratganj to Aliganj and Indira Nagar.
+             </p>
+           </div>
+         </div>
+ 
+         {/* Detailed Narrative */}
+-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xs space-y-8">
++        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 space-y-8">
+           <div>
+-            <h2 className="text-2xl font-bold text-slate-900 mb-3">Our Mission</h2>
++            <h2 className="text-2xl font-semibold text-slate-900 mb-3">Our Mission</h2>
+             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+               Finding needed medications, checking which pharmacy has stock, and arranging dependable delivery can be challenging, especially for senior citizens or busy households. {siteConfig.brandName} bridges this gap with transparent technology and localized support.
+             </p>
+           </div>
+ 
+           <div id="prescription-policy" className="pt-8 border-t border-slate-100">
+-            <h2 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
++            <h2 className="text-2xl font-semibold text-slate-900 mb-3 flex items-center gap-2">
+               <ShieldCheck className="w-6 h-6 text-[#087443]" />
+               Prescription & Safety Guidelines
+             </h2>
+             <p className="text-sm text-slate-600 leading-relaxed mb-4">
+               We strictly adhere to the regulatory frameworks governing pharmaceuticals in India (including the Drugs and Cosmetics Act, 1940 and rules thereunder):
+             </p>
+-            <ul className="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside">
++            <ul className="space-y-2 text-sm sm:text-base text-slate-600 list-disc list-inside">
+               <li>
+                 <strong>Schedule H / H1 / X Drugs:</strong> Can only be fulfilled against an authentic, legible prescription issued by a Registered Medical Practitioner (RMP).
+               </li>
+@@ -93,7 +93,7 @@ export default function AboutPage() {
+           </div>
+ 
+           <div className="pt-8 border-t border-slate-100">
+-            <h2 className="text-2xl font-bold text-slate-900 mb-3">Transparency & Operational Status</h2>
++            <h2 className="text-2xl font-semibold text-slate-900 mb-3">Transparency & Operational Status</h2>
+             <p className="text-sm text-slate-600 leading-relaxed">
+               {siteConfig.brandName} operates with total clarity. We do not manufacture drugs, nor do we present simulated customer statistics or exaggerated delivery promises. If you have questions about licensing or partner pharmacy credentials, our team is always available to assist.
+             </p>
+@@ -101,8 +101,8 @@ export default function AboutPage() {
+         </div>
+ 
+         {/* CTA Banner */}
+-        <div className="bg-[#E4F9EB] border border-[#CBF3D8] rounded-3xl p-8 text-center space-y-4">
+-          <h2 className="text-2xl font-bold text-slate-900">Have Questions About Our Lucknow Services?</h2>
++        <div className="bg-[#E4F9EB] border border-[#CBF3D8] rounded-2xl p-8 text-center space-y-4">
++          <h2 className="text-2xl font-semibold text-slate-900">Have Questions About Our Lucknow Services?</h2>
+           <p className="text-sm text-slate-600 max-w-md mx-auto">
+             Connect with our team directly on WhatsApp or explore our available healthcare catalog.
+           </p>
+diff --git a/src/app/cart/CartPageClient.tsx b/src/app/cart/CartPageClient.tsx
+index bc04d5b..2b217df 100644
+--- a/src/app/cart/CartPageClient.tsx
++++ b/src/app/cart/CartPageClient.tsx
+@@ -89,7 +89,7 @@ export function CartPageClient() {
+           <div className="w-20 h-20 rounded-full bg-[#E4F9EB] text-[#087443] flex items-center justify-center mx-auto mb-4">
+             <ShoppingBag className="w-10 h-10" />
+           </div>
+-          <h1 className="text-2xl font-bold text-slate-900 mb-2">
++          <h1 className="text-2xl font-semibold text-slate-900 mb-2">
+             Your Cart is Empty
+           </h1>
+           <p className="text-sm text-slate-500 mb-8 max-w-sm mx-auto">
+@@ -109,11 +109,11 @@ export function CartPageClient() {
+       <div className="py-10 sm:py-16">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="mb-8">
+-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
++            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
+               <ShoppingBag className="w-3.5 h-3.5" />
+               Order Enquiry
+             </div>
+-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+               Review Cart & Customer Details
+             </h1>
+             <p className="text-sm text-slate-500 mt-1">
+@@ -124,9 +124,9 @@ export function CartPageClient() {
+           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+             {/* Left: Cart Items List */}
+             <div className="lg:col-span-7 space-y-6">
+-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs">
++              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200">
+                 <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+-                  <h2 className="text-base font-bold text-slate-900">
++                  <h2 className="text-base font-semibold text-slate-900">
+                     Selected Items ({items.length})
+                   </h2>
+                   <button
+@@ -142,7 +142,7 @@ export function CartPageClient() {
+                   <div className="mb-5 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-3">
+                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                     <div>
+-                      <p className="font-bold">Prescription Notice</p>
++                      <p className="font-semibold">Prescription Notice</p>
+                       <p className="text-amber-800 leading-relaxed mt-0.5">
+                         Your cart contains prescription items. By placing an enquiry, you understand that an original doctor&apos;s prescription is mandatory for pharmacist approval before dispensing.
+                       </p>
+@@ -188,11 +188,11 @@ export function CartPageClient() {
+                             {formatINR(product.price)} each
+                           </span>
+                           {product.isPrescriptionRequired ? (
+-                            <span className="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
++                            <span className="text-xs font-semibold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
+                               Rx
+                             </span>
+                           ) : (
+-                            <span className="text-[10px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">
++                            <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">
+                               OTC
+                             </span>
+                           )}
+@@ -208,7 +208,7 @@ export function CartPageClient() {
+                             >
+                               <Minus className="w-3.5 h-3.5" />
+                             </button>
+-                            <span className="text-xs font-bold text-slate-800 w-5 text-center">
++                            <span className="text-xs font-semibold text-slate-800 w-5 text-center">
+                               {quantity}
+                             </span>
+                             <button
+@@ -221,7 +221,7 @@ export function CartPageClient() {
+                             </button>
+                           </div>
+ 
+-                          <span className="text-sm font-bold text-slate-900">
++                          <span className="text-sm font-semibold text-slate-900">
+                             {formatINR(product.price * quantity)}
+                           </span>
+                         </div>
+@@ -232,7 +232,7 @@ export function CartPageClient() {
+               </div>
+ 
+               {/* Order Disclaimer Banner */}
+-              <div className="p-4 rounded-2xl bg-white border border-emerald-100 text-xs text-slate-500 space-y-2">
++              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-500 space-y-2">
+                 <div className="flex items-center gap-2 text-slate-800 font-semibold">
+                   <Info className="w-4 h-4 text-[#087443]" />
+                   <span>Important Enquiry Protocol</span>
+@@ -248,8 +248,8 @@ export function CartPageClient() {
+ 
+             {/* Right: Customer Delivery Form & Checkout Summary */}
+             <div className="lg:col-span-5">
+-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs sticky top-28">
+-                <h2 className="text-lg font-bold text-slate-900 mb-1">
++              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 sticky top-28">
++                <h2 className="text-lg font-semibold text-slate-900 mb-1">
+                   Delivery Details (Lucknow)
+                 </h2>
+                 <p className="text-xs text-slate-500 mb-5">
+@@ -269,7 +269,7 @@ export function CartPageClient() {
+                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
+                     />
+                     {errors.fullName && (
+-                      <p className="text-[11px] text-rose-500 mt-1">
++                      <p className="text-xs text-rose-500 mt-1">
+                         {errors.fullName.message}
+                       </p>
+                     )}
+@@ -287,7 +287,7 @@ export function CartPageClient() {
+                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
+                     />
+                     {errors.phone && (
+-                      <p className="text-[11px] text-rose-500 mt-1">
++                      <p className="text-xs text-rose-500 mt-1">
+                         {errors.phone.message}
+                       </p>
+                     )}
+@@ -305,7 +305,7 @@ export function CartPageClient() {
+                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
+                     />
+                     {errors.addressLine && (
+-                      <p className="text-[11px] text-rose-500 mt-1">
++                      <p className="text-xs text-rose-500 mt-1">
+                         {errors.addressLine.message}
+                       </p>
+                     )}
+@@ -324,7 +324,7 @@ export function CartPageClient() {
+                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
+                       />
+                       {errors.locality && (
+-                        <p className="text-[11px] text-rose-500 mt-1">
++                        <p className="text-xs text-rose-500 mt-1">
+                           {errors.locality.message}
+                         </p>
+                       )}
+@@ -341,7 +341,7 @@ export function CartPageClient() {
+                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
+                       />
+                       {errors.pinCode && (
+-                        <p className="text-[11px] text-rose-500 mt-1">
++                        <p className="text-xs text-rose-500 mt-1">
+                           {errors.pinCode.message}
+                         </p>
+                       )}
+@@ -402,7 +402,7 @@ export function CartPageClient() {
+                       <span>Estimated Delivery:</span>
+                       <span>To be confirmed</span>
+                     </div>
+-                    <div className="flex justify-between text-sm font-bold text-slate-900 pt-2 border-t border-slate-100">
++                    <div className="flex justify-between text-sm font-semibold text-slate-900 pt-2 border-t border-slate-100">
+                       <span>Estimated Total:</span>
+                       <span className="text-[#087443] text-base">
+                         {formatINR(subtotal)}
+@@ -420,7 +420,7 @@ export function CartPageClient() {
+                     <span>Continue on WhatsApp</span>
+                   </button>
+ 
+-                  <p className="text-[11px] text-slate-400 text-center">
++                  <p className="text-xs text-slate-400 text-center">
+                     Sends your items and delivery address directly to WhatsApp for pharmacist assistance.
+                   </p>
+                 </form>
+diff --git a/src/app/categories/[slug]/CategoryPageClient.tsx b/src/app/categories/[slug]/CategoryPageClient.tsx
+index 51a46e2..cf26abb 100644
+--- a/src/app/categories/[slug]/CategoryPageClient.tsx
++++ b/src/app/categories/[slug]/CategoryPageClient.tsx
+@@ -61,13 +61,13 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
+         </nav>
+ 
+         {/* Category Hero Banner */}
+-        <div className="bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-3xl p-6 sm:p-10 mb-10 overflow-hidden relative">
++        <div className="bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-2xl p-6 sm:p-10 mb-10 overflow-hidden relative">
+           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+             <div className="md:col-span-8 space-y-3">
+-              <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#087443] bg-white px-3 py-1 rounded-full border border-[#CBF3D8]">
++              <span className="inline-block text-xs font-semibold text-[#087443] bg-white px-3 py-1 rounded-full border border-[#CBF3D8]">
+                 {category.badgeText}
+               </span>
+-              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++              <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+                 {category.name} in Lucknow
+               </h1>
+               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
+@@ -75,7 +75,7 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
+               </p>
+             </div>
+             <div className="md:col-span-4">
+-              <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-emerald-100 shadow-xs bg-white">
++              <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-slate-200 bg-white">
+                 <Image
+                   src={category.image}
+                   alt={category.name}
+@@ -96,7 +96,7 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
+               placeholder={`Search within ${category.name}...`}
+               value={searchQuery}
+               onChange={(e) => setSearchQuery(e.target.value)}
+-              className="w-full pl-10 pr-8 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765]"
++              className="w-full pl-10 pr-8 py-2.5 rounded-xl border border-slate-200 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765]"
+             />
+             {searchQuery && (
+               <button
+@@ -164,8 +164,8 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
+ 
+         {/* Product Cards */}
+         {filtered.length === 0 ? (
+-          <div className="bg-white rounded-3xl p-12 text-center border border-dashed border-slate-300">
+-            <h3 className="font-bold text-slate-800 text-base mb-1">
++          <div className="bg-white rounded-2xl p-12 text-center border border-dashed border-slate-300">
++            <h3 className="font-semibold text-slate-800 text-base mb-1">
+               No products found in this category
+             </h3>
+             <p className="text-xs text-slate-500 mb-4">
+diff --git a/src/app/contact/ContactClient.tsx b/src/app/contact/ContactClient.tsx
+index 1f083c5..2a251d3 100644
+--- a/src/app/contact/ContactClient.tsx
++++ b/src/app/contact/ContactClient.tsx
+@@ -35,10 +35,10 @@ export function ContactClient() {
+       <div className="py-12 sm:py-20">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="max-w-2xl mb-12">
+-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
++            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
+               Get in Touch
+             </div>
+-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+               Contact {siteConfig.brandName}
+             </h1>
+             <p className="text-sm sm:text-base text-slate-500 mt-2">
+@@ -50,12 +50,12 @@ export function ContactClient() {
+             {/* Left: Contact Info & WhatsApp CTA */}
+             <div className="lg:col-span-5 space-y-6">
+               {/* WhatsApp Card */}
+-              <div className="bg-[#E4F9EB] border border-[#CBF3D8] rounded-3xl p-6 sm:p-8 space-y-4">
++              <div className="bg-[#E4F9EB] border border-[#CBF3D8] rounded-2xl p-6 sm:p-8 space-y-4">
+                 <div className="w-12 h-12 rounded-2xl bg-[#087443] text-white flex items-center justify-center">
+                   <MessageCircle className="w-6 h-6" />
+                 </div>
+                 <div>
+-                  <h2 className="text-lg font-bold text-slate-900">
++                  <h2 className="text-lg font-semibold text-slate-900">
+                     Fastest Response via WhatsApp
+                   </h2>
+                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+@@ -67,7 +67,7 @@ export function ContactClient() {
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onClick={handleWhatsAppClick}
+-                  className="btn-primary w-full py-3 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2"
++                  className="btn-primary w-full py-3 text-sm sm:text-base font-semibold flex items-center justify-center gap-2"
+                 >
+                   <MessageCircle className="w-4 h-4" />
+                   <span>Start WhatsApp Conversation</span>
+@@ -75,8 +75,8 @@ export function ContactClient() {
+               </div>
+ 
+               {/* Contact Details List */}
+-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs space-y-5">
+-                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
++              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-5">
++                <h3 className="text-sm font-semibold text-slate-900">
+                   Support Channels & Desk
+                 </h3>
+ 
+@@ -86,7 +86,7 @@ export function ContactClient() {
+                       <Clock className="w-4 h-4" />
+                     </div>
+                     <div>
+-                      <h4 className="font-bold text-slate-900">Operational Hours</h4>
++                      <h4 className="font-semibold text-slate-900">Operational Hours</h4>
+                       <p className="text-slate-500 mt-0.5">{siteConfig.supportHours}</p>
+                     </div>
+                   </div>
+@@ -96,7 +96,7 @@ export function ContactClient() {
+                       <Mail className="w-4 h-4" />
+                     </div>
+                     <div>
+-                      <h4 className="font-bold text-slate-900">Email Enquiries</h4>
++                      <h4 className="font-semibold text-slate-900">Email Enquiries</h4>
+                       <p className="text-slate-500 mt-0.5">{siteConfig.supportEmail}</p>
+                     </div>
+                   </div>
+@@ -106,7 +106,7 @@ export function ContactClient() {
+                       <MapPin className="w-4 h-4" />
+                     </div>
+                     <div>
+-                      <h4 className="font-bold text-slate-900">Coordination Desk Location</h4>
++                      <h4 className="font-semibold text-slate-900">Coordination Desk Location</h4>
+                       <p className="text-slate-500 mt-0.5">{siteConfig.officeAddress}</p>
+                     </div>
+                   </div>
+@@ -116,8 +116,8 @@ export function ContactClient() {
+ 
+             {/* Right: Message Form */}
+             <div className="lg:col-span-7">
+-              <div className="bg-white rounded-3xl p-6 sm:p-10 border border-emerald-100 shadow-xs">
+-                <h2 className="text-xl font-bold text-slate-900 mb-2">
++              <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200">
++                <h2 className="text-xl font-semibold text-slate-900 mb-2">
+                   Send an Online Message
+                 </h2>
+                 <p className="text-xs text-slate-500 mb-6">
+@@ -126,10 +126,10 @@ export function ContactClient() {
+ 
+                 {formSubmitted ? (
+                   <div className="p-8 text-center bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-2xl space-y-3">
+-                    <div className="w-12 h-12 rounded-full bg-[#20C765] text-white flex items-center justify-center mx-auto">
++                    <div className="w-12 h-12 rounded-full bg-[#087443] text-white flex items-center justify-center mx-auto">
+                       <CheckCircle className="w-6 h-6" />
+                     </div>
+-                    <h3 className="font-bold text-slate-900 text-base">
++                    <h3 className="font-semibold text-slate-900 text-base">
+                       Message Received!
+                     </h3>
+                     <p className="text-xs text-slate-600 max-w-sm mx-auto">
+@@ -207,7 +207,7 @@ export function ContactClient() {
+ 
+                     <button
+                       type="submit"
+-                      className="btn-primary py-3 px-6 text-xs sm:text-sm font-semibold flex items-center gap-2"
++                      className="btn-primary py-3 px-6 text-sm sm:text-base font-semibold flex items-center gap-2"
+                     >
+                       <Send className="w-4 h-4" />
+                       <span>Submit Query</span>
+diff --git a/src/app/globals.css b/src/app/globals.css
+index ee1603f..4135a0a 100644
+--- a/src/app/globals.css
++++ b/src/app/globals.css
+@@ -34,9 +34,23 @@ body {
+   background-color: var(--background);
+   color: var(--foreground);
+   overflow-x: hidden;
++  font-size: 1rem;
++  line-height: 1.6;
+   -webkit-font-smoothing: antialiased;
++  -moz-osx-font-smoothing: grayscale;
++  text-rendering: optimizeLegibility;
+ }
+ 
++/* Typography: one family, few weights (400 / 500 / 600), tight headings, readable body */
++h1, h2, h3, h4 {
++  letter-spacing: -0.02em;
++  text-wrap: balance;
++}
++h1 { line-height: 1.1; }
++h2, h3 { line-height: 1.25; }
++p, li { text-wrap: pretty; }
++.tabular-nums { font-variant-numeric: tabular-nums; }
++
+ /* One clear, visible keyboard focus style everywhere */
+ :focus-visible {
+   outline: 2px solid var(--accent);
+diff --git a/src/app/layout.tsx b/src/app/layout.tsx
+index 593fad7..5e3dc90 100644
+--- a/src/app/layout.tsx
++++ b/src/app/layout.tsx
+@@ -51,7 +51,7 @@ export default function RootLayout({
+   children: React.ReactNode;
+ }>) {
+   return (
+-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
++    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} h-full antialiased`}>
+       <body className="min-h-full flex flex-col bg-white text-slate-900">
+         <CartProvider>
+           <Navbar />
+diff --git a/src/app/privacy/page.tsx b/src/app/privacy/page.tsx
+index bd0e91b..d50cda5 100644
+--- a/src/app/privacy/page.tsx
++++ b/src/app/privacy/page.tsx
+@@ -11,13 +11,13 @@ export default function PrivacyPage() {
+   return (
+     <div className="py-12 sm:py-20">
+       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xs space-y-8">
++        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 space-y-8">
+           <div>
+-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-3">
++            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-3">
+               <ShieldCheck className="w-3.5 h-3.5" />
+               Patient Confidentiality
+             </div>
+-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+               Privacy Policy
+             </h1>
+             <p className="text-xs text-slate-400 mt-2">
+@@ -25,16 +25,16 @@ export default function PrivacyPage() {
+             </p>
+           </div>
+ 
+-          <div className="space-y-6 text-xs sm:text-sm text-slate-600 leading-relaxed">
++          <div className="space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed">
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">1. Commitment to Health Data Privacy</h2>
++              <h2 className="text-base font-semibold text-slate-900">1. Commitment to Health Data Privacy</h2>
+               <p>
+                 At {siteConfig.brandName}, we understand that medical and healthcare information is deeply personal. We are committed to safeguarding your privacy in compliance with applicable Indian information technology and healthcare privacy principles.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">2. Information We Collect</h2>
++              <h2 className="text-base font-semibold text-slate-900">2. Information We Collect</h2>
+               <p>
+                 When you initiate an order enquiry or communicate with us, we may collect:
+               </p>
+@@ -47,21 +47,21 @@ export default function PrivacyPage() {
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">3. How Information is Used</h2>
++              <h2 className="text-base font-semibold text-slate-900">3. How Information is Used</h2>
+               <p>
+                 Collected data is used strictly for fulfilling order enquiries, verifying prescription compliance with licensed pharmacists, calculating delivery charges, and facilitating dispatch to your doorstep in Lucknow. We do not sell, rent, or trade customer health information to third-party advertisers.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">4. Prescription Handling & Pharmacist Verification</h2>
++              <h2 className="text-base font-semibold text-slate-900">4. Prescription Handling & Pharmacist Verification</h2>
+               <p>
+                 Doctor&apos;s prescriptions are accessible exclusively to registered pharmacists and authorized healthcare coordinators tasked with validating dosage, schedule compliance, and product suitability.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">5. Contact Information</h2>
++              <h2 className="text-base font-semibold text-slate-900">5. Contact Information</h2>
+               <p>
+                 For questions regarding your data privacy, contact our support desk at{" "}
+                 <span className="font-semibold text-slate-900">{siteConfig.supportEmail}</span> or reach out via our official WhatsApp support channel.
+diff --git a/src/app/products/ProductsClient.tsx b/src/app/products/ProductsClient.tsx
+index feefd5f..c9e3902 100644
+--- a/src/app/products/ProductsClient.tsx
++++ b/src/app/products/ProductsClient.tsx
+@@ -50,11 +50,11 @@ export function ProductsClient({ initialCategory = "all" }: ProductsClientProps)
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         {/* Page Header */}
+         <div className="mb-8 max-w-2xl">
+-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
++          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
+             <ShieldCheck className="w-3.5 h-3.5" />
+             Product Catalogue
+           </div>
+-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++          <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+             Medicines & Healthcare Essentials
+           </h1>
+           <p className="text-sm sm:text-base text-slate-500 mt-2">
+@@ -63,7 +63,7 @@ export function ProductsClient({ initialCategory = "all" }: ProductsClientProps)
+         </div>
+ 
+         {/* Development Data Disclaimer */}
+-        <div className="mb-8 p-4 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-start gap-3 text-xs text-emerald-950">
++        <div className="mb-8 p-4 rounded-2xl bg-emerald-50/70 border border-slate-200 flex items-start gap-3 text-xs text-emerald-950">
+           <Info className="w-4 h-4 text-[#087443] shrink-0 mt-0.5" />
+           <p className="leading-relaxed">
+             <strong>Development Notice:</strong> This catalogue is a demonstration dataset for testing the user experience. It does not represent confirmed live stock. Prescription medicines require a valid prescription and applicable licensed-pharmacy review before any fulfilment.
+diff --git a/src/app/products/[slug]/ProductDetailClient.tsx b/src/app/products/[slug]/ProductDetailClient.tsx
+index 28bbcc0..bea4769 100644
+--- a/src/app/products/[slug]/ProductDetailClient.tsx
++++ b/src/app/products/[slug]/ProductDetailClient.tsx
+@@ -85,10 +85,10 @@ export function ProductDetailClient({
+           </nav>
+ 
+           {/* Main Product Layout */}
+-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 bg-white rounded-3xl p-6 sm:p-10 border border-emerald-100 shadow-xs mb-16">
++          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 mb-16">
+             {/* Left: Product Image */}
+             <div className="lg:col-span-5">
+-              <div className="relative aspect-4/3 sm:aspect-square rounded-3xl bg-[#E4F9EB]/60 border border-[#CBF3D8] overflow-hidden">
++              <div className="relative aspect-4/3 sm:aspect-square rounded-2xl bg-[#E4F9EB]/60 border border-[#CBF3D8] overflow-hidden">
+                 <Image
+                   src={product.image}
+                   alt={product.name}
+@@ -97,7 +97,7 @@ export function ProductDetailClient({
+                   className="object-cover"
+                 />
+                 {discountPercent > 0 && (
+-                  <span className="absolute top-4 left-4 bg-[#20C765] text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
++                  <span className="absolute top-4 left-4 bg-[#087443] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                     {discountPercent}% OFF
+                   </span>
+                 )}
+@@ -108,7 +108,7 @@ export function ProductDetailClient({
+             <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
+               <div>
+                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+-                  <span className="text-xs font-bold tracking-wider text-[#087443] uppercase bg-[#E4F9EB] px-3 py-1 rounded-full">
++                  <span className="text-xs font-semibold text-[#087443] bg-[#E4F9EB] px-3 py-1 rounded-full">
+                     {product.brand}
+                   </span>
+                   <PrescriptionBadge
+@@ -117,7 +117,7 @@ export function ProductDetailClient({
+                   />
+                 </div>
+ 
+-                <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug mt-3">
++                <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight leading-snug mt-3">
+                   {product.name}
+                 </h1>
+ 
+@@ -127,7 +127,7 @@ export function ProductDetailClient({
+ 
+                 {/* Price Display */}
+                 <div className="mt-4 pt-4 border-t border-slate-100 flex items-baseline gap-3">
+-                  <span className="text-3xl font-extrabold text-slate-900">
++                  <span className="text-3xl font-semibold text-slate-900">
+                     {formatINR(product.price)}
+                   </span>
+                   {product.mrp > product.price && (
+@@ -150,14 +150,14 @@ export function ProductDetailClient({
+                   <div className="mt-5 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-3">
+                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                     <div>
+-                      <p className="font-bold">Prescription Required (Schedule H)</p>
++                      <p className="font-semibold">Prescription Required (Schedule H)</p>
+                       <p className="text-amber-800 mt-0.5 leading-relaxed">
+                         Under Indian drug regulations, this medicine requires a valid prescription from a registered medical practitioner. You will be asked to share your prescription on WhatsApp prior to order fulfillment.
+                       </p>
+                     </div>
+                   </div>
+                 ) : (
+-                  <div className="mt-5 p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 text-xs text-emerald-900 flex items-center gap-2.5">
++                  <div className="mt-5 p-3.5 rounded-2xl bg-emerald-50/70 border border-slate-200 text-xs text-emerald-900 flex items-center gap-2.5">
+                     <CheckCircle className="w-4 h-4 text-[#087443] shrink-0" />
+                     <span>Over-the-counter wellness product. No prescription required.</span>
+                   </div>
+@@ -176,7 +176,7 @@ export function ProductDetailClient({
+                     >
+                       <Minus className="w-4 h-4" />
+                     </button>
+-                    <span className="text-sm font-bold text-slate-800">
++                    <span className="text-sm font-semibold text-slate-800">
+                       {quantity}
+                     </span>
+                     <button
+@@ -209,7 +209,7 @@ export function ProductDetailClient({
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onClick={handleWhatsAppClick}
+-                  className="w-full btn-secondary py-3 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2"
++                  className="w-full btn-secondary py-3 text-sm sm:text-base font-semibold flex items-center justify-center gap-2"
+                 >
+                   <MessageCircle className="w-4 h-4 text-[#087443]" />
+                   <span>Enquire Availability for this Item on WhatsApp</span>
+@@ -226,17 +226,17 @@ export function ProductDetailClient({
+ 
+           {/* Details & Disclaimers Tabs/Cards */}
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs space-y-3">
+-              <div className="flex items-center gap-2 text-slate-900 font-bold text-base">
++            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-3">
++              <div className="flex items-center gap-2 text-slate-900 font-semibold text-base">
+                 <ShieldCheck className="w-5 h-5 text-[#087443]" />
+                 <h3>Product Overview & Description</h3>
+               </div>
+-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
++              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                 {product.fullDescription}
+               </p>
+               {product.usageNotes && (
+                 <div className="pt-3 border-t border-slate-100">
+-                  <h4 className="text-xs font-bold text-slate-800 mb-1">
++                  <h4 className="text-xs font-semibold text-slate-800 mb-1">
+                     Usage Guidelines:
+                   </h4>
+                   <p className="text-xs text-slate-500 leading-relaxed">
+@@ -246,12 +246,12 @@ export function ProductDetailClient({
+               )}
+             </div>
+ 
+-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs space-y-3">
+-              <div className="flex items-center gap-2 text-slate-900 font-bold text-base">
++            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-3">
++              <div className="flex items-center gap-2 text-slate-900 font-semibold text-base">
+                 <AlertTriangle className="w-5 h-5 text-amber-500" />
+                 <h3>Safety & Legal Disclaimers</h3>
+               </div>
+-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
++              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                 {product.safetyDisclaimer ||
+                   "Always read product labelling before usage. If you have pre-existing conditions, consult a licensed healthcare practitioner."}
+               </p>
+@@ -267,7 +267,7 @@ export function ProductDetailClient({
+           {relatedProducts.length > 0 && (
+             <div>
+               <div className="mb-6">
+-                <h3 className="text-xl font-bold text-slate-900">
++                <h3 className="text-xl font-semibold text-slate-900">
+                   Related Healthcare Products
+                 </h3>
+                 <p className="text-xs text-slate-500">
+diff --git a/src/app/returns/page.tsx b/src/app/returns/page.tsx
+index 602bf77..1989e03 100644
+--- a/src/app/returns/page.tsx
++++ b/src/app/returns/page.tsx
+@@ -11,13 +11,13 @@ export default function ReturnsPage() {
+   return (
+     <div className="py-12 sm:py-20">
+       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xs space-y-8">
++        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 space-y-8">
+           <div>
+-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-3">
++            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-3">
+               <RefreshCw className="w-3.5 h-3.5" />
+               Returns & Cancellations
+             </div>
+-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+               Returns & Refund Policy
+             </h1>
+             <p className="text-xs text-slate-400 mt-2">
+@@ -25,16 +25,16 @@ export default function ReturnsPage() {
+             </p>
+           </div>
+ 
+-          <div className="space-y-6 text-xs sm:text-sm text-slate-600 leading-relaxed">
++          <div className="space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed">
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">1. Regulatory Pharmacy Standards</h2>
++              <h2 className="text-base font-semibold text-slate-900">1. Regulatory Pharmacy Standards</h2>
+               <p>
+                 Due to stringent healthcare safety guidelines and the potential risk of contamination or compromised storage, medicines and ingestible health products once delivered cannot be returned for resale under statutory pharmacy regulations, except under specific circumstances outlined below.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">2. Eligible Reasons for Replacement or Refund</h2>
++              <h2 className="text-base font-semibold text-slate-900">2. Eligible Reasons for Replacement or Refund</h2>
+               <p>
+                 You are entitled to a full replacement or refund in the event of:
+               </p>
+@@ -46,21 +46,21 @@ export default function ReturnsPage() {
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">3. Claim Notification Period</h2>
++              <h2 className="text-base font-semibold text-slate-900">3. Claim Notification Period</h2>
+               <p>
+                 In case of damaged or incorrect items, please inform our WhatsApp support desk within 24 hours of delivery with photographic evidence of the package and retail invoice. Our team will promptly review and arrange a return pickup or replacement.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">4. Order Cancellation</h2>
++              <h2 className="text-base font-semibold text-slate-900">4. Order Cancellation</h2>
+               <p>
+                 You may cancel your order enquiry at any time before the partner chemist completes verification and dispatches the delivery agent. Once a rider has departed with temperature-regulated medications, cancellation may not be possible.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">5. Refund Processing</h2>
++              <h2 className="text-base font-semibold text-slate-900">5. Refund Processing</h2>
+               <p>
+                 Approved refunds for pre-paid transactions will be credited back via the original payment method or UPI within 3 to 5 business days. Cash-on-delivery orders eligible for returns will be reimbursed via instant UPI transfer.
+               </p>
+diff --git a/src/app/shipping/page.tsx b/src/app/shipping/page.tsx
+index bd19802..e0c1cc4 100644
+--- a/src/app/shipping/page.tsx
++++ b/src/app/shipping/page.tsx
+@@ -11,13 +11,13 @@ export default function ShippingPage() {
+   return (
+     <div className="py-12 sm:py-20">
+       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xs space-y-8">
++        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 space-y-8">
+           <div>
+-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-3">
++            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-3">
+               <Truck className="w-3.5 h-3.5" />
+               Lucknow Logistics
+             </div>
+-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+               Shipping & Delivery Policy
+             </h1>
+             <p className="text-xs text-slate-400 mt-2">
+@@ -25,16 +25,16 @@ export default function ShippingPage() {
+             </p>
+           </div>
+ 
+-          <div className="space-y-6 text-xs sm:text-sm text-slate-600 leading-relaxed">
++          <div className="space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed">
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">1. Service Coverage Area</h2>
++              <h2 className="text-base font-semibold text-slate-900">1. Service Coverage Area</h2>
+               <p>
+                 {siteConfig.brandName} coordinates deliveries specifically within the municipal boundaries of Lucknow, including primary residential and commercial areas such as Gomti Nagar, Indira Nagar, Hazratganj, Aliganj, Jankipuram, Alambagh, Mahanagar, and Chowk.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">2. Order Processing & Verification</h2>
++              <h2 className="text-base font-semibold text-slate-900">2. Order Processing & Verification</h2>
+               <p>
+                 Upon receiving an order enquiry on WhatsApp, our team coordinates with a licensed chemist in Lucknow to:
+               </p>
+@@ -46,21 +46,21 @@ export default function ShippingPage() {
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">3. Delivery Timelines</h2>
++              <h2 className="text-base font-semibold text-slate-900">3. Delivery Timelines</h2>
+               <p>
+                 Delivery schedules depend on route proximity, partner chemist operating hours, traffic conditions in Lucknow, and order volume. While many orders are fulfilled the same day, we do not make unverified express claims (such as 30-minute delivery guarantees) unless explicitly confirmed for your specific address.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">4. Delivery Charges</h2>
++              <h2 className="text-base font-semibold text-slate-900">4. Delivery Charges</h2>
+               <p>
+                 Delivery fees are calculated based on distance from the dispatching partner chemist to your locality. Any nominal delivery charge will be clearly conveyed before you finalize the order on WhatsApp.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">5. Temperature-Sensitive Medicines</h2>
++              <h2 className="text-base font-semibold text-slate-900">5. Temperature-Sensitive Medicines</h2>
+               <p>
+                 Cold-chain items (such as insulin or specific eye drops) are packaged in insulated containers with cold packs to preserve efficacy throughout transit within Lucknow.
+               </p>
+diff --git a/src/app/terms/page.tsx b/src/app/terms/page.tsx
+index 3799f9c..6f3618e 100644
+--- a/src/app/terms/page.tsx
++++ b/src/app/terms/page.tsx
+@@ -11,13 +11,13 @@ export default function TermsPage() {
+   return (
+     <div className="py-12 sm:py-20">
+       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xs space-y-8">
++        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 space-y-8">
+           <div>
+-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-3">
++            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-3">
+               <FileText className="w-3.5 h-3.5" />
+               Service Terms
+             </div>
+-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+               Terms and Conditions
+             </h1>
+             <p className="text-xs text-slate-400 mt-2">
+@@ -25,16 +25,16 @@ export default function TermsPage() {
+             </p>
+           </div>
+ 
+-          <div className="space-y-6 text-xs sm:text-sm text-slate-600 leading-relaxed">
++          <div className="space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed">
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">1. Nature of the Service</h2>
++              <h2 className="text-base font-semibold text-slate-900">1. Nature of the Service</h2>
+               <p>
+                 {siteConfig.brandName} provides an order enquiry and technology communication platform connecting consumers located in Lucknow with appropriately licensed retail chemists and pharmacists. Submitting a cart request via WhatsApp constitutes an enquiry, not an automatic sale or guaranteed delivery contract.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">2. Prescription Verification Requirement</h2>
++              <h2 className="text-base font-semibold text-slate-900">2. Prescription Verification Requirement</h2>
+               <p>
+                 In compliance with the Indian Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945:
+               </p>
+@@ -46,21 +46,21 @@ export default function TermsPage() {
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">3. No Replacement for Medical Advice</h2>
++              <h2 className="text-base font-semibold text-slate-900">3. No Replacement for Medical Advice</h2>
+               <p>
+                 The descriptions, categories, and educational content available on this website are for informational orientation only and do not constitute clinical diagnosis, medical counsel, or self-medication recommendations. Always follow instructions from your treating physician.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">4. Pricing and Payment Confirmation</h2>
++              <h2 className="text-base font-semibold text-slate-900">4. Pricing and Payment Confirmation</h2>
+               <p>
+                 Product prices displayed in the development catalogue are indicative maximum retail prices (MRP) or estimated costs. Exact payable amounts, applicable delivery fees, and discounts will be confirmed by the pharmacy team during the WhatsApp review before dispatch.
+               </p>
+             </section>
+ 
+             <section className="space-y-2">
+-              <h2 className="text-base font-bold text-slate-900">5. Jurisdiction</h2>
++              <h2 className="text-base font-semibold text-slate-900">5. Jurisdiction</h2>
+               <p>
+                 These terms and conditions shall be governed by and construed in accordance with the laws of India, and any disputes shall be subject to the exclusive jurisdiction of the competent courts in Lucknow, Uttar Pradesh.
+               </p>
+diff --git a/src/components/CartDrawer.tsx b/src/components/CartDrawer.tsx
+index 2dba763..ab32035 100644
+--- a/src/components/CartDrawer.tsx
++++ b/src/components/CartDrawer.tsx
+@@ -31,15 +31,15 @@ export function CartDrawer() {
+       />
+ 
+       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
+-        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between border-l border-emerald-100">
++        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between border-l border-slate-200">
+           {/* Header */}
+           <div className="p-5 border-b border-slate-100 flex items-center justify-between bg-[#E4F9EB]/40">
+             <div className="flex items-center gap-2.5">
+-              <div className="w-9 h-9 rounded-xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center font-bold">
++              <div className="w-9 h-9 rounded-xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center font-semibold">
+                 <ShoppingBag className="w-5 h-5" />
+               </div>
+               <div>
+-                <h2 className="text-base font-bold text-slate-900">Your Medicine Cart</h2>
++                <h2 className="text-base font-semibold text-slate-900">Your Medicine Cart</h2>
+                 <p className="text-xs text-slate-500">
+                   {totalItems} {totalItems === 1 ? "item" : "items"} selected
+                 </p>
+@@ -70,7 +70,7 @@ export function CartDrawer() {
+                 <div className="w-16 h-16 rounded-full bg-[#E4F9EB] text-[#087443] flex items-center justify-center mx-auto mb-3">
+                   <ShoppingBag className="w-8 h-8" />
+                 </div>
+-                <h3 className="font-bold text-slate-800 text-base mb-1">
++                <h3 className="font-semibold text-slate-800 text-base mb-1">
+                   Your cart is empty
+                 </h3>
+                 <p className="text-xs text-slate-500 max-w-xs mx-auto mb-6">
+@@ -113,10 +113,10 @@ export function CartDrawer() {
+                       </button>
+                     </div>
+ 
+-                    <p className="text-[11px] text-slate-400 mt-0.5">{product.unit}</p>
++                    <p className="text-xs text-slate-400 mt-0.5">{product.unit}</p>
+ 
+                     <div className="flex items-center justify-between mt-2.5">
+-                      <span className="text-xs font-bold text-slate-900">
++                      <span className="text-xs font-semibold text-slate-900">
+                         {formatINR(product.price * quantity)}
+                       </span>
+ 
+@@ -129,7 +129,7 @@ export function CartDrawer() {
+                         >
+                           <Minus className="w-3 h-3" />
+                         </button>
+-                        <span className="text-xs font-bold text-slate-800 w-4 text-center">
++                        <span className="text-xs font-semibold text-slate-800 w-4 text-center">
+                           {quantity}
+                         </span>
+                         <button
+@@ -152,9 +152,9 @@ export function CartDrawer() {
+             <div className="p-5 border-t border-slate-100 bg-white space-y-3">
+               <div className="flex items-center justify-between text-sm">
+                 <span className="text-slate-500 font-medium">Estimated Subtotal:</span>
+-                <span className="text-lg font-bold text-slate-900">{formatINR(subtotal)}</span>
++                <span className="text-lg font-semibold text-slate-900">{formatINR(subtotal)}</span>
+               </div>
+-              <p className="text-[11px] text-slate-400">
++              <p className="text-xs text-slate-400">
+                 Delivery charges & pharmacist consultation will be confirmed on WhatsApp.
+               </p>
+ 
+diff --git a/src/components/DeliveryChecker.tsx b/src/components/DeliveryChecker.tsx
+index 0c84dd9..c28d061 100644
+--- a/src/components/DeliveryChecker.tsx
++++ b/src/components/DeliveryChecker.tsx
+@@ -80,7 +80,7 @@ export function DeliveryChecker() {
+                     </p>
+                   </div>
+                   <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+-                    <span className="text-[11px] text-slate-400">
++                    <span className="text-xs text-slate-400">
+                       Need instant confirmation?
+                     </span>
+                     <a
+@@ -88,7 +88,7 @@ export function DeliveryChecker() {
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       onClick={handleWhatsAppClick}
+-                      className="text-xs font-bold text-[#087443] hover:underline inline-flex items-center gap-1"
++                      className="text-xs font-semibold text-[#087443] hover:underline inline-flex items-center gap-1"
+                     >
+                       <MessageCircle className="w-3.5 h-3.5" />
+                       Chat on WhatsApp
+@@ -116,15 +116,15 @@ export function DeliveryChecker() {
+                   className="p-4 rounded-xl bg-white border border-slate-200 hover:border-slate-400 transition-colors cursor-pointer group"
+                 >
+                   <div className="flex items-start justify-between mb-2">
+-                    <span className="text-xs font-bold text-slate-900 group-hover:text-[#087443] transition-colors">
++                    <span className="text-xs font-semibold text-slate-900 group-hover:text-[#087443] transition-colors">
+                       {loc.name}
+                     </span>
+-                    <span className="text-[10px] font-mono bg-slate-100 group-hover:bg-[#E4F9EB] text-slate-600 group-hover:text-[#087443] px-2 py-0.5 rounded-md font-semibold transition-colors">
++                    <span className="text-xs font-mono bg-slate-100 group-hover:bg-[#E4F9EB] text-slate-600 group-hover:text-[#087443] px-2 py-0.5 rounded-md font-semibold transition-colors">
+                       {loc.pinCode}
+                     </span>
+                   </div>
+-                  <p className="text-[11px] text-slate-500 font-medium">{loc.zone}</p>
+-                  <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
++                  <p className="text-xs text-slate-500 font-medium">{loc.zone}</p>
++                  <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
+                     <span className="text-[#087443] font-semibold group-hover:underline">
+                       Enquire status
+                     </span>
+@@ -134,7 +134,7 @@ export function DeliveryChecker() {
+               ))}
+             </div>
+ 
+-            <p className="text-[11px] text-slate-400 text-center pt-2">
++            <p className="text-xs text-slate-400 text-center pt-2">
+               Note: Localities listed are illustrative examples only. Live coverage, product availability, and delivery charges must be confirmed before fulfilment.
+             </p>
+           </div>
+diff --git a/src/components/FeatureGrid.tsx b/src/components/FeatureGrid.tsx
+index 888f478..c24f86d 100644
+--- a/src/components/FeatureGrid.tsx
++++ b/src/components/FeatureGrid.tsx
+@@ -43,13 +43,13 @@ const FEATURES = [
+ 
+ export function FeatureGrid() {
+   return (
+-    <section className="py-16 sm:py-20 bg-white border-y border-emerald-100/60">
++    <section className="py-16 sm:py-20 bg-white border-y border-slate-200/60">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-3">
++          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-3">
+             Why Choose Dawa Lucknow
+           </div>
+-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+             Designed for Transparent Healthcare Access
+           </h2>
+           <p className="text-sm sm:text-base text-slate-500 mt-3">
+@@ -66,10 +66,10 @@ export function FeatureGrid() {
+                 key={idx}
+                 className="group p-7 rounded-2xl bg-white border border-[#E2F5E9] hover:border-[#CBF3D8] hover:shadow-lg transition-all duration-200 flex flex-col justify-start"
+               >
+-                <div className="w-12 h-12 rounded-2xl bg-[#E4F9EB] group-hover:bg-[#20C765] text-[#087443] group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-200">
++                <div className="w-12 h-12 rounded-2xl bg-[#E4F9EB] group-hover:bg-[#087443] text-[#087443] group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-200">
+                   <IconComponent className="w-6 h-6 stroke-[2.2]" />
+                 </div>
+-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#087443] transition-colors">
++                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-[#087443] transition-colors">
+                   {feature.title}
+                 </h3>
+                 <p className="text-sm text-slate-600 leading-relaxed">
+diff --git a/src/components/Footer.tsx b/src/components/Footer.tsx
+index 48285f9..f04b322 100644
+--- a/src/components/Footer.tsx
++++ b/src/components/Footer.tsx
+@@ -1,139 +1,83 @@
+ import React from "react";
+ import Link from "next/link";
+ import { siteConfig } from "@/config/site";
+-import { Mail, Clock, MapPin, ShieldAlert } from "lucide-react";
+ import { LogoMark } from "./Logo";
+ 
++const companyLinks = [
++  { label: "About", href: "/about" },
++  { label: "Contact", href: "/contact" },
++  { label: "Prescription guidelines", href: "/about#prescription-policy" },
++];
++
++function FooterColumn({
++  title,
++  links,
++}: {
++  title: string;
++  links: { label: string; href: string }[];
++}) {
++  return (
++    <div>
++      <h4 className="text-sm font-semibold text-slate-900">{title}</h4>
++      <ul className="mt-5 space-y-3.5">
++        {links.map((item) => (
++          <li key={item.label}>
++            <Link
++              href={item.href}
++              className="text-base text-slate-500 hover:text-slate-900 transition-colors"
++            >
++              {item.label}
++            </Link>
++          </li>
++        ))}
++      </ul>
++    </div>
++  );
++}
++
+ export function Footer() {
+   return (
+-    <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+-        {/* Top Grid */}
+-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+-          {/* Brand Info (Span 2) */}
+-          <div className="lg:col-span-2 space-y-4">
+-            <Link href="/" className="flex items-center gap-2.5">
++    <footer className="border-t border-slate-200 bg-white">
++      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-10">
++        <div className="grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-12">
++          {/* Brand */}
++          <div className="col-span-2 lg:col-span-1">
++            <Link href="/" className="inline-flex items-center gap-2.5" aria-label={`${siteConfig.brandName} home`}>
+               <LogoMark className="w-9 h-9" />
+-              <span className="text-xl font-bold text-white tracking-tight">
++              <span className="text-xl font-semibold tracking-tight text-slate-900">
+                 {siteConfig.brandName}
+               </span>
+             </Link>
+-
+-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+-              {siteConfig.description} Built for medicine and healthcare
+-              essential enquiries across Lucknow, Uttar Pradesh.
++            <p className="mt-5 text-base text-slate-500 leading-relaxed max-w-xs">
++              Medicines and healthcare essentials, ordered on WhatsApp and delivered in Lucknow.
+             </p>
+-
+-            <div className="pt-2 text-xs text-slate-400 space-y-2">
+-              <div className="flex items-start gap-2">
+-                <MapPin className="w-4 h-4 text-[#20C765] shrink-0 mt-0.5" />
+-                <span>{siteConfig.officeAddress}</span>
+-              </div>
+-              <div className="flex items-center gap-2">
+-                <Clock className="w-4 h-4 text-[#20C765] shrink-0" />
+-                <span>{siteConfig.supportHours}</span>
+-              </div>
+-              <div className="flex items-center gap-2">
+-                <Mail className="w-4 h-4 text-[#20C765] shrink-0" />
+-                <span>{siteConfig.supportEmail}</span>
+-              </div>
+-            </div>
+-          </div>
+-
+-          {/* Product Categories */}
+-          <div>
+-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+-              Categories
+-            </h4>
+-            <ul className="space-y-2.5 text-xs text-slate-400">
+-              {siteConfig.footerCategories.map((item) => (
+-                <li key={item.label}>
+-                  <Link
+-                    href={item.href}
+-                    className="hover:text-[#20C765] transition-colors"
+-                  >
+-                    {item.label}
+-                  </Link>
+-                </li>
+-              ))}
+-            </ul>
++            <p className="mt-4 text-sm text-slate-400">{siteConfig.supportHours}</p>
+           </div>
+ 
+-          {/* Customer Support */}
+-          <div>
+-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+-              Customer Support
+-            </h4>
+-            <ul className="space-y-2.5 text-xs text-slate-400">
+-              {siteConfig.footerSupport.map((item) => (
+-                <li key={item.label}>
+-                  <Link
+-                    href={item.href}
+-                    className="hover:text-[#20C765] transition-colors"
+-                  >
+-                    {item.label}
+-                  </Link>
+-                </li>
+-              ))}
+-            </ul>
+-          </div>
+-
+-          {/* Policies & Legal */}
+-          <div>
+-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+-              Policies & Legal
+-            </h4>
+-            <ul className="space-y-2.5 text-xs text-slate-400">
+-              {siteConfig.footerLegal.map((item) => (
+-                <li key={item.label}>
+-                  <Link
+-                    href={item.href}
+-                    className="hover:text-[#20C765] transition-colors"
+-                  >
+-                    {item.label}
+-                  </Link>
+-                </li>
+-              ))}
+-              <li className="pt-2 text-[11px] text-slate-500">
+-                Licence: {siteConfig.pharmacyLicenceNumber}
+-              </li>
+-            </ul>
+-          </div>
++          <FooterColumn
++            title="Shop"
++            links={siteConfig.footerCategories}
++          />
++          <FooterColumn title="Help" links={siteConfig.footerSupport} />
++          <FooterColumn title="Company" links={companyLinks} />
++          <FooterColumn title="Legal" links={siteConfig.footerLegal} />
+         </div>
+ 
+-        {/* Prescription and Legal Disclaimers Banner */}
+-        <div className="py-6 my-6 border-b border-slate-800 text-xs text-slate-400 space-y-3">
+-          <div className="flex items-start gap-2.5">
+-            <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+-            <div className="space-y-1">
+-              <p className="font-semibold text-slate-300">
+-                Prescription & Healthcare Supply Compliance Information
+-              </p>
+-              <p className="text-[11px] text-slate-400 leading-relaxed">
+-                {siteConfig.legalDisclaimer}
+-              </p>
+-            </div>
+-          </div>
+-        </div>
++        {/* Regulatory notice — kept, but quiet */}
++        <p className="mt-14 max-w-3xl text-xs text-slate-400 leading-relaxed">
++          {siteConfig.legalDisclaimer} Licence: {siteConfig.pharmacyLicenceNumber}
++        </p>
+ 
+-        {/* Bottom Copyright */}
+-        <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
++        {/* Bottom bar */}
++        <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm text-slate-500">
+           <p>
+-            © {siteConfig.copyrightYear} {siteConfig.brandName}. All rights reserved. (Lucknow, UP, India)
++            © {siteConfig.copyrightYear} {siteConfig.brandName}. All rights reserved.
+           </p>
+           <div className="flex items-center gap-6">
+-            <Link href="/privacy" className="hover:text-slate-300 transition-colors">
+-              Privacy
+-            </Link>
+-            <Link href="/terms" className="hover:text-slate-300 transition-colors">
+-              Terms
+-            </Link>
+-            <Link href="/shipping" className="hover:text-slate-300 transition-colors">
+-              Delivery
+-            </Link>
+-            <Link href="/returns" className="hover:text-slate-300 transition-colors">
+-              Returns
+-            </Link>
++            <Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</Link>
++            <Link href="/terms" className="hover:text-slate-900 transition-colors">Terms</Link>
++            <Link href="/shipping" className="hover:text-slate-900 transition-colors">Delivery</Link>
++            <Link href="/returns" className="hover:text-slate-900 transition-colors">Returns</Link>
+           </div>
+         </div>
+       </div>
+diff --git a/src/components/Navbar.tsx b/src/components/Navbar.tsx
+index 3c9daa2..a0bb62f 100644
+--- a/src/components/Navbar.tsx
++++ b/src/components/Navbar.tsx
+@@ -62,7 +62,7 @@ export function Navbar() {
+           >
+             <ShoppingBag className="w-5 h-5" />
+             {totalItems > 0 && (
+-              <span className="absolute top-1 right-1 min-w-4 h-4 px-1 rounded-full bg-[#087443] text-white text-[10px] font-semibold flex items-center justify-center">
++              <span className="absolute top-1 right-1 min-w-4 h-4 px-1 rounded-full bg-[#087443] text-white text-xs font-semibold flex items-center justify-center">
+                 {totalItems}
+               </span>
+             )}
+diff --git a/src/components/PrescriptionBadge.tsx b/src/components/PrescriptionBadge.tsx
+index 6de44f2..3c6b814 100644
+--- a/src/components/PrescriptionBadge.tsx
++++ b/src/components/PrescriptionBadge.tsx
+@@ -7,7 +7,7 @@ interface PrescriptionBadgeProps {
+ 
+ /** Rx items get a clear amber tag; OTC stays quiet so the warning stands out. */
+ export function PrescriptionBadge({ isRequired, size = "sm" }: PrescriptionBadgeProps) {
+-  const pad = size === "sm" ? "px-2 py-0.5 text-[11px]" : "px-2.5 py-1 text-xs";
++  const pad = size === "sm" ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-xs";
+   if (isRequired) {
+     return (
+       <span className={`inline-block font-semibold rounded-md bg-amber-100 text-amber-900 ${pad}`}>
+diff --git a/src/components/ProblemSolution.tsx b/src/components/ProblemSolution.tsx
+index 08d4484..eec5cb4 100644
+--- a/src/components/ProblemSolution.tsx
++++ b/src/components/ProblemSolution.tsx
+@@ -6,13 +6,13 @@ export function ProblemSolution() {
+     <section className="py-12 sm:py-16 bg-[#f7fdf9]">
+       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+         {/* Large lightly bordered rounded panel with generous padding */}
+-        <div className="bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-xs">
++        <div className="bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-2xl p-8 sm:p-12 md:p-16 text-center">
+           {/* Problem Block */}
+           <div className="max-w-2xl mx-auto mb-10">
+             <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 mb-4">
+               <AlertCircle className="w-6 h-6" />
+             </div>
+-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
++            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight mb-4">
+               Getting Your Medicines Should Be Simple
+             </h2>
+             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+@@ -38,7 +38,7 @@ export function ProblemSolution() {
+             <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#CBF3D8] text-[#087443] mb-4">
+               <CheckCircle2 className="w-6 h-6" />
+             </div>
+-            <h3 className="text-xl sm:text-2xl font-bold text-[#087443] mb-3">
++            <h3 className="text-xl sm:text-2xl font-semibold text-[#087443] mb-3">
+               A Simpler Way to Order
+             </h3>
+             <p className="text-base text-slate-700 leading-relaxed">
+diff --git a/src/components/ProductCard.tsx b/src/components/ProductCard.tsx
+index 343b4d2..d200e82 100644
+--- a/src/components/ProductCard.tsx
++++ b/src/components/ProductCard.tsx
+@@ -42,7 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
+ 
+       <div className="mt-3 flex items-center justify-between gap-2">
+         <div className="flex items-baseline gap-1.5">
+-          <span className="text-base font-semibold text-slate-900">{formatINR(product.price)}</span>
++          <span className="text-base font-semibold text-slate-900 tabular-nums">{formatINR(product.price)}</span>
+           {product.mrp > product.price && (
+             <span className="text-xs text-slate-400 line-through">{formatINR(product.mrp)}</span>
+           )}
+diff --git a/src/components/ProductGrid.tsx b/src/components/ProductGrid.tsx
+index 5a4e789..b6e229c 100644
+--- a/src/components/ProductGrid.tsx
++++ b/src/components/ProductGrid.tsx
+@@ -16,11 +16,11 @@ export function ProductGrid({
+ }: ProductGridProps) {
+   if (products.length === 0) {
+     return (
+-      <div className="bg-white rounded-3xl p-12 text-center border border-dashed border-slate-300 max-w-xl mx-auto my-8">
++      <div className="bg-white rounded-2xl p-12 text-center border border-dashed border-slate-300 max-w-xl mx-auto my-8">
+         <div className="w-14 h-14 rounded-full bg-[#E4F9EB] text-[#087443] flex items-center justify-center mx-auto mb-4">
+           <PackageOpen className="w-7 h-7" />
+         </div>
+-        <h3 className="text-lg font-bold text-slate-800 mb-2">No Matching Products</h3>
++        <h3 className="text-lg font-semibold text-slate-800 mb-2">No Matching Products</h3>
+         <p className="text-sm text-slate-500 leading-relaxed mb-6">
+           {emptyMessage}
+         </p>
+diff --git a/src/components/ProductSearch.tsx b/src/components/ProductSearch.tsx
+index d157dcb..1da4cee 100644
+--- a/src/components/ProductSearch.tsx
++++ b/src/components/ProductSearch.tsx
+@@ -46,7 +46,7 @@ export function ProductSearch({
+   };
+ 
+   return (
+-    <div className="bg-white rounded-3xl p-5 sm:p-6 border border-emerald-100/80 shadow-xs mb-8 space-y-5">
++    <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 mb-8 space-y-5">
+       {/* Search Bar + Sort Row */}
+       <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+         <div className="relative flex-1">
+@@ -101,7 +101,7 @@ export function ProductSearch({
+               onClick={() => onCategoryChange(cat.id)}
+               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+                 isActive
+-                  ? "bg-[#087443] text-white shadow-xs"
++                  ? "bg-[#087443] text-white"
+                   : "bg-slate-100 text-slate-600 hover:bg-[#E4F9EB] hover:text-[#087443]"
+               }`}
+             >
+diff --git a/src/components/Testimonials.tsx b/src/components/Testimonials.tsx
+index d18aa26..338b50c 100644
+--- a/src/components/Testimonials.tsx
++++ b/src/components/Testimonials.tsx
+@@ -7,16 +7,16 @@ export function Testimonials() {
+     <section className="py-16 sm:py-20 bg-[#f7fdf9]">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
++          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
+             Feedback & Experiences
+           </div>
+-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
++          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+             Trusted by Lucknow Residents
+           </h2>
+           <p className="text-sm sm:text-base text-slate-500 mt-2">
+             See how convenient WhatsApp-first medicine enquiry makes managing prescriptions and healthcare essentials.
+           </p>
+-          <div className="mt-3 inline-block bg-amber-50 border border-amber-200 text-amber-900 text-[11px] font-semibold px-3 py-1 rounded-full">
++          <div className="mt-3 inline-block bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold px-3 py-1 rounded-full">
+             Demo Showcase: Illustrative customer cards for design review
+           </div>
+         </div>
+@@ -26,7 +26,7 @@ export function Testimonials() {
+           {SAMPLE_TESTIMONIALS.map((item) => (
+             <div
+               key={item.id}
+-              className="relative p-6 rounded-3xl bg-[#E4F9EB]/70 border border-[#CBF3D8] hover:border-[#20C765] hover:bg-[#E4F9EB] transition-all duration-300 flex flex-col justify-between"
++              className="relative p-6 rounded-2xl bg-[#E4F9EB]/70 border border-[#CBF3D8] hover:border-[#20C765] hover:bg-[#E4F9EB] transition-all duration-300 flex flex-col justify-between"
+             >
+               <div>
+                 {/* Demo Content Watermark Tag */}
+@@ -36,27 +36,27 @@ export function Testimonials() {
+                       <Star key={i} className="w-4 h-4 fill-amber-400 stroke-none" />
+                     ))}
+                   </div>
+-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-white/80 text-[#087443] px-2 py-0.5 rounded-full border border-emerald-100">
++                  <span className="text-xs font-semibold bg-white/80 text-[#087443] px-2 py-0.5 rounded-full border border-slate-200">
+                     Demo
+                   </span>
+                 </div>
+ 
+                 {/* Review Text */}
+-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
++                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6">
+                   &ldquo;{item.reviewText}&rdquo;
+                 </p>
+               </div>
+ 
+               {/* Author & Locality */}
+               <div className="pt-4 border-t border-[#CBF3D8]/80 flex items-center gap-3">
+-                <div className="w-9 h-9 rounded-full bg-[#087443] text-white flex items-center justify-center font-bold text-xs shrink-0">
++                <div className="w-9 h-9 rounded-full bg-[#087443] text-white flex items-center justify-center font-semibold text-xs shrink-0">
+                   {item.customerName.charAt(0)}
+                 </div>
+                 <div className="min-w-0">
+-                  <h4 className="text-xs font-bold text-slate-900 truncate">
++                  <h4 className="text-xs font-semibold text-slate-900 truncate">
+                     {item.customerName}
+                   </h4>
+-                  <p className="text-[11px] text-[#087443] font-medium truncate">
++                  <p className="text-xs text-[#087443] font-medium truncate">
+                     {item.locality}
+                   </p>
+                 </div>
+diff --git a/src/components/WhatsAppConfigModal.tsx b/src/components/WhatsAppConfigModal.tsx
+index 2d77a8c..91e8b76 100644
+--- a/src/components/WhatsAppConfigModal.tsx
++++ b/src/components/WhatsAppConfigModal.tsx
+@@ -45,7 +45,7 @@ export function WhatsAppConfigModal({
+ 
+   return (
+     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
+-      <div className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-emerald-100 animate-in fade-in zoom-in-95 duration-200">
++      <div className="relative w-full max-w-lg bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200 animate-in fade-in zoom-in-95 duration-200">
+         <button
+           onClick={onClose}
+           className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+@@ -59,7 +59,7 @@ export function WhatsAppConfigModal({
+             <MessageCircle className="w-6 h-6" />
+           </div>
+           <div>
+-            <h3 className="text-xl font-bold text-slate-900">
++            <h3 className="text-xl font-semibold text-slate-900">
+               WhatsApp Order Preview
+             </h3>
+             <p className="text-xs text-slate-500 font-medium">
+@@ -74,9 +74,9 @@ export function WhatsAppConfigModal({
+           </p>
+           <p className="text-xs text-slate-600 leading-relaxed">
+             To connect your live pharmacy WhatsApp business account, set{" "}
+-            <code className="bg-white px-1 rounded font-mono text-[11px]">NEXT_PUBLIC_WHATSAPP_NUMBER</code> in{" "}
+-            <code className="bg-white px-1 rounded font-mono text-[11px]">.env.local</code> or update{" "}
+-            <code className="bg-white px-1 rounded font-mono text-[11px]">src/config/site.ts</code>.
++            <code className="bg-white px-1 rounded font-mono text-xs">NEXT_PUBLIC_WHATSAPP_NUMBER</code> in{" "}
++            <code className="bg-white px-1 rounded font-mono text-xs">.env.local</code> or update{" "}
++            <code className="bg-white px-1 rounded font-mono text-xs">src/config/site.ts</code>.
+           </p>
+         </div>
+ 
+@@ -120,7 +120,7 @@ export function WhatsAppConfigModal({
+               Test Send <ExternalLink className="w-3.5 h-3.5 ml-1" />
+             </button>
+           </div>
+-          <p className="text-[11px] text-slate-400">
++          <p className="text-xs text-slate-400">
+             Include country code without &apos;+&apos; (e.g. 91 for India).
+           </p>
+         </div>

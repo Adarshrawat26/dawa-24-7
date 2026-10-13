@@ -35,10 +35,10 @@ export function ContactClient() {
       <div className="py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
               Get in Touch
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
               Contact {siteConfig.brandName}
             </h1>
             <p className="text-sm sm:text-base text-slate-500 mt-2">
@@ -50,12 +50,12 @@ export function ContactClient() {
             {/* Left: Contact Info & WhatsApp CTA */}
             <div className="lg:col-span-5 space-y-6">
               {/* WhatsApp Card */}
-              <div className="bg-[#E4F9EB] border border-[#CBF3D8] rounded-3xl p-6 sm:p-8 space-y-4">
+              <div className="bg-[#E4F9EB] border border-[#CBF3D8] rounded-2xl p-6 sm:p-8 space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#087443] text-white flex items-center justify-center">
                   <MessageCircle className="w-6 h-6" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold text-slate-900">
+                  <h2 className="text-lg font-semibold text-slate-900">
                     Fastest Response via WhatsApp
                   </h2>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
@@ -67,7 +67,7 @@ export function ContactClient() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsAppClick}
-                  className="btn-primary w-full py-3 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2"
+                  className="btn-primary w-full py-3 text-sm sm:text-base font-semibold flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Start WhatsApp Conversation</span>
@@ -75,8 +75,8 @@ export function ContactClient() {
               </div>
 
               {/* Contact Details List */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs space-y-5">
-                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-5">
+                <h3 className="text-sm font-semibold text-slate-900">
                   Support Channels & Desk
                 </h3>
 
@@ -86,7 +86,7 @@ export function ContactClient() {
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900">Operational Hours</h4>
+                      <h4 className="font-semibold text-slate-900">Operational Hours</h4>
                       <p className="text-slate-500 mt-0.5">{siteConfig.supportHours}</p>
                     </div>
                   </div>
@@ -96,7 +96,7 @@ export function ContactClient() {
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900">Email Enquiries</h4>
+                      <h4 className="font-semibold text-slate-900">Email Enquiries</h4>
                       <p className="text-slate-500 mt-0.5">{siteConfig.supportEmail}</p>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ export function ContactClient() {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900">Coordination Desk Location</h4>
+                      <h4 className="font-semibold text-slate-900">Coordination Desk Location</h4>
                       <p className="text-slate-500 mt-0.5">{siteConfig.officeAddress}</p>
                     </div>
                   </div>
@@ -116,8 +116,8 @@ export function ContactClient() {
 
             {/* Right: Message Form */}
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl p-6 sm:p-10 border border-emerald-100 shadow-xs">
-                <h2 className="text-xl font-bold text-slate-900 mb-2">
+              <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200">
+                <h2 className="text-xl font-semibold text-slate-900 mb-2">
                   Send an Online Message
                 </h2>
                 <p className="text-xs text-slate-500 mb-6">
@@ -126,10 +126,10 @@ export function ContactClient() {
 
                 {formSubmitted ? (
                   <div className="p-8 text-center bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-2xl space-y-3">
-                    <div className="w-12 h-12 rounded-full bg-[#20C765] text-white flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 rounded-full bg-[#087443] text-white flex items-center justify-center mx-auto">
                       <CheckCircle className="w-6 h-6" />
                     </div>
-                    <h3 className="font-bold text-slate-900 text-base">
+                    <h3 className="font-semibold text-slate-900 text-base">
                       Message Received!
                     </h3>
                     <p className="text-xs text-slate-600 max-w-sm mx-auto">
@@ -207,7 +207,7 @@ export function ContactClient() {
 
                     <button
                       type="submit"
-                      className="btn-primary py-3 px-6 text-xs sm:text-sm font-semibold flex items-center gap-2"
+                      className="btn-primary py-3 px-6 text-sm sm:text-base font-semibold flex items-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       <span>Submit Query</span>

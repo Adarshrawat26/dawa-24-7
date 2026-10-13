@@ -26,12 +26,12 @@ export function FloatingWhatsAppButton() {
           rel="noopener noreferrer"
           onClick={handleClick}
           aria-label="Chat with Dawa Lucknow on WhatsApp for medicine enquiries"
-          className="w-14 h-14 rounded-full bg-[#20C765] hover:bg-[#18A953] text-white flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#20C765]/40"
+          className="w-14 h-14 rounded-full bg-[#087443] hover:bg-[#05502E] text-white flex items-center justify-center shadow-md transition-colors"
         >
           <MessageCircle className="w-7 h-7 stroke-[2.2]" />
 
           {/* Pulse ring */}
-          <span className="absolute -inset-1 rounded-full bg-[#20C765]/30 animate-ping -z-10 group-hover:hidden" />
+          
         </a>
 
         {/* Tooltip on hover */}

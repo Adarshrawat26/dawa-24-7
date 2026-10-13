@@ -45,7 +45,7 @@ export function WhatsAppConfigModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-emerald-100 animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-lg bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200 animate-in fade-in zoom-in-95 duration-200">
         <button
           onClick={onClose}
           className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
@@ -59,7 +59,7 @@ export function WhatsAppConfigModal({
             <MessageCircle className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-slate-900">
+            <h3 className="text-xl font-semibold text-slate-900">
               WhatsApp Order Preview
             </h3>
             <p className="text-xs text-slate-500 font-medium">
@@ -74,9 +74,9 @@ export function WhatsAppConfigModal({
           </p>
           <p className="text-xs text-slate-600 leading-relaxed">
             To connect your live pharmacy WhatsApp business account, set{" "}
-            <code className="bg-white px-1 rounded font-mono text-[11px]">NEXT_PUBLIC_WHATSAPP_NUMBER</code> in{" "}
-            <code className="bg-white px-1 rounded font-mono text-[11px]">.env.local</code> or update{" "}
-            <code className="bg-white px-1 rounded font-mono text-[11px]">src/config/site.ts</code>.
+            <code className="bg-white px-1 rounded font-mono text-xs">NEXT_PUBLIC_WHATSAPP_NUMBER</code> in{" "}
+            <code className="bg-white px-1 rounded font-mono text-xs">.env.local</code> or update{" "}
+            <code className="bg-white px-1 rounded font-mono text-xs">src/config/site.ts</code>.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export function WhatsAppConfigModal({
               Test Send <ExternalLink className="w-3.5 h-3.5 ml-1" />
             </button>
           </div>
-          <p className="text-[11px] text-slate-400">
+          <p className="text-xs text-slate-400">
             Include country code without &apos;+&apos; (e.g. 91 for India).
           </p>
         </div>

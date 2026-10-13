@@ -61,13 +61,13 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
         </nav>
 
         {/* Category Hero Banner */}
-        <div className="bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-3xl p-6 sm:p-10 mb-10 overflow-hidden relative">
+        <div className="bg-[#E4F9EB]/60 border border-[#CBF3D8] rounded-2xl p-6 sm:p-10 mb-10 overflow-hidden relative">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-8 space-y-3">
-              <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#087443] bg-white px-3 py-1 rounded-full border border-[#CBF3D8]">
+              <span className="inline-block text-xs font-semibold text-[#087443] bg-white px-3 py-1 rounded-full border border-[#CBF3D8]">
                 {category.badgeText}
               </span>
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
                 {category.name} in Lucknow
               </h1>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
@@ -75,7 +75,7 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
               </p>
             </div>
             <div className="md:col-span-4">
-              <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-emerald-100 shadow-xs bg-white">
+              <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-slate-200 bg-white">
                 <Image
                   src={category.image}
                   alt={category.name}
@@ -96,7 +96,7 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
               placeholder={`Search within ${category.name}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-8 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765]"
+              className="w-full pl-10 pr-8 py-2.5 rounded-xl border border-slate-200 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765]"
             />
             {searchQuery && (
               <button
@@ -164,8 +164,8 @@ export function CategoryPageClient({ category, products }: CategoryPageClientPro
 
         {/* Product Cards */}
         {filtered.length === 0 ? (
-          <div className="bg-white rounded-3xl p-12 text-center border border-dashed border-slate-300">
-            <h3 className="font-bold text-slate-800 text-base mb-1">
+          <div className="bg-white rounded-2xl p-12 text-center border border-dashed border-slate-300">
+            <h3 className="font-semibold text-slate-800 text-base mb-1">
               No products found in this category
             </h3>
             <p className="text-xs text-slate-500 mb-4">

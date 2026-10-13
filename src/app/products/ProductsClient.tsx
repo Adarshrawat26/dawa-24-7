@@ -50,11 +50,11 @@ export function ProductsClient({ initialCategory = "all" }: ProductsClientProps)
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="mb-8 max-w-2xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
             <ShieldCheck className="w-3.5 h-3.5" />
             Product Catalogue
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
             Medicines & Healthcare Essentials
           </h1>
           <p className="text-sm sm:text-base text-slate-500 mt-2">
@@ -63,7 +63,7 @@ export function ProductsClient({ initialCategory = "all" }: ProductsClientProps)
         </div>
 
         {/* Development Data Disclaimer */}
-        <div className="mb-8 p-4 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-start gap-3 text-xs text-emerald-950">
+        <div className="mb-8 p-4 rounded-2xl bg-emerald-50/70 border border-slate-200 flex items-start gap-3 text-xs text-emerald-950">
           <Info className="w-4 h-4 text-[#087443] shrink-0 mt-0.5" />
           <p className="leading-relaxed">
             <strong>Development Notice:</strong> This catalogue is a demonstration dataset for testing the user experience. It does not represent confirmed live stock. Prescription medicines require a valid prescription and applicable licensed-pharmacy review before any fulfilment.

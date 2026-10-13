@@ -34,11 +34,8 @@ export const siteConfig = {
 
   // Navigation Links
   navLinks: [
-    { label: "All Products", href: "/products" },
-    { label: "Medicine", href: "/categories/medicines" },
-    { label: "Health Kits", href: "/categories/first-aid" },
-    { label: "Personal Care", href: "/categories/personal-care" },
-    { label: "About Us", href: "/about" },
+    { label: "Products", href: "/products" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
 

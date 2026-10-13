@@ -31,15 +31,15 @@ export function CartDrawer() {
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between border-l border-emerald-100">
+        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between border-l border-slate-200">
           {/* Header */}
           <div className="p-5 border-b border-slate-100 flex items-center justify-between bg-[#E4F9EB]/40">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center font-bold">
+              <div className="w-9 h-9 rounded-xl bg-[#E4F9EB] text-[#087443] flex items-center justify-center font-semibold">
                 <ShoppingBag className="w-5 h-5" />
               </div>
               <div>
-                <h2 className="text-base font-bold text-slate-900">Your Medicine Cart</h2>
+                <h2 className="text-base font-semibold text-slate-900">Your Medicine Cart</h2>
                 <p className="text-xs text-slate-500">
                   {totalItems} {totalItems === 1 ? "item" : "items"} selected
                 </p>
@@ -70,7 +70,7 @@ export function CartDrawer() {
                 <div className="w-16 h-16 rounded-full bg-[#E4F9EB] text-[#087443] flex items-center justify-center mx-auto mb-3">
                   <ShoppingBag className="w-8 h-8" />
                 </div>
-                <h3 className="font-bold text-slate-800 text-base mb-1">
+                <h3 className="font-semibold text-slate-800 text-base mb-1">
                   Your cart is empty
                 </h3>
                 <p className="text-xs text-slate-500 max-w-xs mx-auto mb-6">
@@ -113,10 +113,10 @@ export function CartDrawer() {
                       </button>
                     </div>
 
-                    <p className="text-[11px] text-slate-400 mt-0.5">{product.unit}</p>
+                    <p className="text-xs text-slate-400 mt-0.5">{product.unit}</p>
 
                     <div className="flex items-center justify-between mt-2.5">
-                      <span className="text-xs font-bold text-slate-900">
+                      <span className="text-xs font-semibold text-slate-900">
                         {formatINR(product.price * quantity)}
                       </span>
 
@@ -129,7 +129,7 @@ export function CartDrawer() {
                         >
                           <Minus className="w-3 h-3" />
                         </button>
-                        <span className="text-xs font-bold text-slate-800 w-4 text-center">
+                        <span className="text-xs font-semibold text-slate-800 w-4 text-center">
                           {quantity}
                         </span>
                         <button
@@ -152,9 +152,9 @@ export function CartDrawer() {
             <div className="p-5 border-t border-slate-100 bg-white space-y-3">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-500 font-medium">Estimated Subtotal:</span>
-                <span className="text-lg font-bold text-slate-900">{formatINR(subtotal)}</span>
+                <span className="text-lg font-semibold text-slate-900">{formatINR(subtotal)}</span>
               </div>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-xs text-slate-400">
                 Delivery charges & pharmacist consultation will be confirmed on WhatsApp.
               </p>
 

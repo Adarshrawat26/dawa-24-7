@@ -85,10 +85,10 @@ export function ProductDetailClient({
           </nav>
 
           {/* Main Product Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 bg-white rounded-3xl p-6 sm:p-10 border border-emerald-100 shadow-xs mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 mb-16">
             {/* Left: Product Image */}
             <div className="lg:col-span-5">
-              <div className="relative aspect-4/3 sm:aspect-square rounded-3xl bg-[#E4F9EB]/60 border border-[#CBF3D8] overflow-hidden">
+              <div className="relative aspect-4/3 sm:aspect-square rounded-2xl bg-[#E4F9EB]/60 border border-[#CBF3D8] overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -97,7 +97,7 @@ export function ProductDetailClient({
                   className="object-cover"
                 />
                 {discountPercent > 0 && (
-                  <span className="absolute top-4 left-4 bg-[#20C765] text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-4 left-4 bg-[#087443] text-white text-xs font-semibold px-3 py-1 rounded-full">
                     {discountPercent}% OFF
                   </span>
                 )}
@@ -108,7 +108,7 @@ export function ProductDetailClient({
             <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span className="text-xs font-bold tracking-wider text-[#087443] uppercase bg-[#E4F9EB] px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-[#087443] bg-[#E4F9EB] px-3 py-1 rounded-full">
                     {product.brand}
                   </span>
                   <PrescriptionBadge
@@ -117,7 +117,7 @@ export function ProductDetailClient({
                   />
                 </div>
 
-                <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug mt-3">
+                <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight leading-snug mt-3">
                   {product.name}
                 </h1>
 
@@ -127,7 +127,7 @@ export function ProductDetailClient({
 
                 {/* Price Display */}
                 <div className="mt-4 pt-4 border-t border-slate-100 flex items-baseline gap-3">
-                  <span className="text-3xl font-extrabold text-slate-900">
+                  <span className="text-3xl font-semibold text-slate-900">
                     {formatINR(product.price)}
                   </span>
                   {product.mrp > product.price && (
@@ -150,14 +150,14 @@ export function ProductDetailClient({
                   <div className="mt-5 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-3">
                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-bold">Prescription Required (Schedule H)</p>
+                      <p className="font-semibold">Prescription Required (Schedule H)</p>
                       <p className="text-amber-800 mt-0.5 leading-relaxed">
                         Under Indian drug regulations, this medicine requires a valid prescription from a registered medical practitioner. You will be asked to share your prescription on WhatsApp prior to order fulfillment.
                       </p>
                     </div>
                   </div>
                 ) : (
-                  <div className="mt-5 p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 text-xs text-emerald-900 flex items-center gap-2.5">
+                  <div className="mt-5 p-3.5 rounded-2xl bg-emerald-50/70 border border-slate-200 text-xs text-emerald-900 flex items-center gap-2.5">
                     <CheckCircle className="w-4 h-4 text-[#087443] shrink-0" />
                     <span>Over-the-counter wellness product. No prescription required.</span>
                   </div>
@@ -176,7 +176,7 @@ export function ProductDetailClient({
                     >
                       <Minus className="w-4 h-4" />
                     </button>
-                    <span className="text-sm font-bold text-slate-800">
+                    <span className="text-sm font-semibold text-slate-800">
                       {quantity}
                     </span>
                     <button
@@ -209,7 +209,7 @@ export function ProductDetailClient({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsAppClick}
-                  className="w-full btn-secondary py-3 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2"
+                  className="w-full btn-secondary py-3 text-sm sm:text-base font-semibold flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4 text-[#087443]" />
                   <span>Enquire Availability for this Item on WhatsApp</span>
@@ -226,17 +226,17 @@ export function ProductDetailClient({
 
           {/* Details & Disclaimers Tabs/Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-base">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-semibold text-base">
                 <ShieldCheck className="w-5 h-5 text-[#087443]" />
                 <h3>Product Overview & Description</h3>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {product.fullDescription}
               </p>
               {product.usageNotes && (
                 <div className="pt-3 border-t border-slate-100">
-                  <h4 className="text-xs font-bold text-slate-800 mb-1">
+                  <h4 className="text-xs font-semibold text-slate-800 mb-1">
                     Usage Guidelines:
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -246,12 +246,12 @@ export function ProductDetailClient({
               )}
             </div>
 
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-base">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-semibold text-base">
                 <AlertTriangle className="w-5 h-5 text-amber-500" />
                 <h3>Safety & Legal Disclaimers</h3>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {product.safetyDisclaimer ||
                   "Always read product labelling before usage. If you have pre-existing conditions, consult a licensed healthcare practitioner."}
               </p>
@@ -267,7 +267,7 @@ export function ProductDetailClient({
           {relatedProducts.length > 0 && (
             <div>
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-semibold text-slate-900">
                   Related Healthcare Products
                 </h3>
                 <p className="text-xs text-slate-500">

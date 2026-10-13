@@ -89,7 +89,7 @@ export function CartPageClient() {
           <div className="w-20 h-20 rounded-full bg-[#E4F9EB] text-[#087443] flex items-center justify-center mx-auto mb-4">
             <ShoppingBag className="w-10 h-10" />
           </div>
-          <h1 className="text-2xl font-bold text-slate-900 mb-2">
+          <h1 className="text-2xl font-semibold text-slate-900 mb-2">
             Your Cart is Empty
           </h1>
           <p className="text-sm text-slate-500 mb-8 max-w-sm mx-auto">
@@ -109,11 +109,11 @@ export function CartPageClient() {
       <div className="py-10 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4F9EB] text-[#087443] text-xs font-semibold mb-2">
               <ShoppingBag className="w-3.5 h-3.5" />
               Order Enquiry
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
               Review Cart & Customer Details
             </h1>
             <p className="text-sm text-slate-500 mt-1">
@@ -124,9 +124,9 @@ export function CartPageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Left: Cart Items List */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200">
                 <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
-                  <h2 className="text-base font-bold text-slate-900">
+                  <h2 className="text-base font-semibold text-slate-900">
                     Selected Items ({items.length})
                   </h2>
                   <button
@@ -142,7 +142,7 @@ export function CartPageClient() {
                   <div className="mb-5 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-3">
                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-bold">Prescription Notice</p>
+                      <p className="font-semibold">Prescription Notice</p>
                       <p className="text-amber-800 leading-relaxed mt-0.5">
                         Your cart contains prescription items. By placing an enquiry, you understand that an original doctor&apos;s prescription is mandatory for pharmacist approval before dispensing.
                       </p>
@@ -188,11 +188,11 @@ export function CartPageClient() {
                             {formatINR(product.price)} each
                           </span>
                           {product.isPrescriptionRequired ? (
-                            <span className="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
+                            <span className="text-xs font-semibold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
                               Rx
                             </span>
                           ) : (
-                            <span className="text-[10px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">
+                            <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">
                               OTC
                             </span>
                           )}
@@ -208,7 +208,7 @@ export function CartPageClient() {
                             >
                               <Minus className="w-3.5 h-3.5" />
                             </button>
-                            <span className="text-xs font-bold text-slate-800 w-5 text-center">
+                            <span className="text-xs font-semibold text-slate-800 w-5 text-center">
                               {quantity}
                             </span>
                             <button
@@ -221,7 +221,7 @@ export function CartPageClient() {
                             </button>
                           </div>
 
-                          <span className="text-sm font-bold text-slate-900">
+                          <span className="text-sm font-semibold text-slate-900">
                             {formatINR(product.price * quantity)}
                           </span>
                         </div>
@@ -232,7 +232,7 @@ export function CartPageClient() {
               </div>
 
               {/* Order Disclaimer Banner */}
-              <div className="p-4 rounded-2xl bg-white border border-emerald-100 text-xs text-slate-500 space-y-2">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-500 space-y-2">
                 <div className="flex items-center gap-2 text-slate-800 font-semibold">
                   <Info className="w-4 h-4 text-[#087443]" />
                   <span>Important Enquiry Protocol</span>
@@ -248,8 +248,8 @@ export function CartPageClient() {
 
             {/* Right: Customer Delivery Form & Checkout Summary */}
             <div className="lg:col-span-5">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-100 shadow-xs sticky top-28">
-                <h2 className="text-lg font-bold text-slate-900 mb-1">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 sticky top-28">
+                <h2 className="text-lg font-semibold text-slate-900 mb-1">
                   Delivery Details (Lucknow)
                 </h2>
                 <p className="text-xs text-slate-500 mb-5">
@@ -269,7 +269,7 @@ export function CartPageClient() {
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
                     />
                     {errors.fullName && (
-                      <p className="text-[11px] text-rose-500 mt-1">
+                      <p className="text-xs text-rose-500 mt-1">
                         {errors.fullName.message}
                       </p>
                     )}
@@ -287,7 +287,7 @@ export function CartPageClient() {
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
                     />
                     {errors.phone && (
-                      <p className="text-[11px] text-rose-500 mt-1">
+                      <p className="text-xs text-rose-500 mt-1">
                         {errors.phone.message}
                       </p>
                     )}
@@ -305,7 +305,7 @@ export function CartPageClient() {
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
                     />
                     {errors.addressLine && (
-                      <p className="text-[11px] text-rose-500 mt-1">
+                      <p className="text-xs text-rose-500 mt-1">
                         {errors.addressLine.message}
                       </p>
                     )}
@@ -324,7 +324,7 @@ export function CartPageClient() {
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
                       />
                       {errors.locality && (
-                        <p className="text-[11px] text-rose-500 mt-1">
+                        <p className="text-xs text-rose-500 mt-1">
                           {errors.locality.message}
                         </p>
                       )}
@@ -341,7 +341,7 @@ export function CartPageClient() {
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#20C765]/30 focus:border-[#20C765] outline-none"
                       />
                       {errors.pinCode && (
-                        <p className="text-[11px] text-rose-500 mt-1">
+                        <p className="text-xs text-rose-500 mt-1">
                           {errors.pinCode.message}
                         </p>
                       )}
@@ -402,7 +402,7 @@ export function CartPageClient() {
                       <span>Estimated Delivery:</span>
                       <span>To be confirmed</span>
                     </div>
-                    <div className="flex justify-between text-sm font-bold text-slate-900 pt-2 border-t border-slate-100">
+                    <div className="flex justify-between text-sm font-semibold text-slate-900 pt-2 border-t border-slate-100">
                       <span>Estimated Total:</span>
                       <span className="text-[#087443] text-base">
                         {formatINR(subtotal)}
@@ -420,7 +420,7 @@ export function CartPageClient() {
                     <span>Continue on WhatsApp</span>
                   </button>
 
-                  <p className="text-[11px] text-slate-400 text-center">
+                  <p className="text-xs text-slate-400 text-center">
                     Sends your items and delivery address directly to WhatsApp for pharmacist assistance.
                   </p>
                 </form>

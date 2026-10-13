@@ -16,11 +16,11 @@ export function ProductGrid({
 }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="bg-white rounded-3xl p-12 text-center border border-dashed border-slate-300 max-w-xl mx-auto my-8">
+      <div className="bg-white rounded-2xl p-12 text-center border border-dashed border-slate-300 max-w-xl mx-auto my-8">
         <div className="w-14 h-14 rounded-full bg-[#E4F9EB] text-[#087443] flex items-center justify-center mx-auto mb-4">
           <PackageOpen className="w-7 h-7" />
         </div>
-        <h3 className="text-lg font-bold text-slate-800 mb-2">No Matching Products</h3>
+        <h3 className="text-lg font-semibold text-slate-800 mb-2">No Matching Products</h3>
         <p className="text-sm text-slate-500 leading-relaxed mb-6">
           {emptyMessage}
         </p>

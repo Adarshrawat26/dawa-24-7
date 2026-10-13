@@ -46,7 +46,7 @@ export function ProductSearch({
   };
 
   return (
-    <div className="bg-white rounded-3xl p-5 sm:p-6 border border-emerald-100/80 shadow-xs mb-8 space-y-5">
+    <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 mb-8 space-y-5">
       {/* Search Bar + Sort Row */}
       <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
         <div className="relative flex-1">
@@ -101,7 +101,7 @@ export function ProductSearch({
               onClick={() => onCategoryChange(cat.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                 isActive
-                  ? "bg-[#087443] text-white shadow-xs"
+                  ? "bg-[#087443] text-white"
                   : "bg-slate-100 text-slate-600 hover:bg-[#E4F9EB] hover:text-[#087443]"
               }`}
             >
