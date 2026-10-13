@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7fdf9;
+  --foreground: #0f172a;
+  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-mint-50: #F5FCF7;
+  --color-mint-100: #E4F9EB;
+  --color-mint-200: #CBF3D8;
+  --color-mint-300: #A0E8B9;
+  --color-mint-400: #55D48B;
+  --color-mint-500: #20C765;
+  --color-mint-600: #18A953;
+  --color-forest-700: #0B854D;
+  --color-forest-800: #087443;
+  --color-forest-900: #05502E;
+  --color-forest-950: #03361E;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background-color: #f7fdf9;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7fdf9;
+  color: #0f172a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom subtle button and interaction styling */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #20C765;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px 0 rgba(32, 199, 101, 0.28);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background-color: #18A953;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(32, 199, 101, 0.38);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: #087443;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #C9F3D7;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #E4F9EB;
+  border-color: #9CE7B7;
+  color: #05502E;
+  transform: translateY(-1px);
+}
+
+/* Rounded card containers */
+.brand-card {
+  background-color: #ffffff;
+  border: 1px solid #E2F5E9;
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 3px 0 rgba(8, 116, 67, 0.04);
+  transition: all 0.2s ease;
+}
+
+.brand-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(8, 116, 67, 0.08);
+  border-color: #CBF3D8;
+}
+
+/* Soft mint container */
+.mint-panel {
+  background-color: #E4F9EB;
+  border: 1px solid #CBF3D8;
+  border-radius: 1.5rem;
 }
